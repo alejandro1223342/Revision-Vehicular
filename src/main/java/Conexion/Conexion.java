@@ -20,7 +20,7 @@ public class Conexion {
     String url="jdbc:mysql://localhost:3306/";
    
     String user = "root";
-    String pass = "Helado.12";
+    String pass = "jostin";
     String driver="com.mysql.jdbc.Driver";
     Connection cx;
     
