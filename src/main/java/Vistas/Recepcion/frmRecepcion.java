@@ -71,7 +71,7 @@ public class frmRecepcion extends javax.swing.JFrame {
             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
         );
 
-        side_pane.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 170, 40));
+        side_pane.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 170, 40));
 
         btnRevisiones.setBackground(new java.awt.Color(102, 102, 102));
         btnRevisiones.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -83,14 +83,14 @@ public class frmRecepcion extends javax.swing.JFrame {
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Registrar Vehiculo");
+        jLabel5.setText("Registrar Cliente");
 
         javax.swing.GroupLayout btnRevisionesLayout = new javax.swing.GroupLayout(btnRevisiones);
         btnRevisiones.setLayout(btnRevisionesLayout);
         btnRevisionesLayout.setHorizontalGroup(
             btnRevisionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnRevisionesLayout.createSequentialGroup()
-                .addContainerGap(18, Short.MAX_VALUE)
+                .addContainerGap(31, Short.MAX_VALUE)
                 .addComponent(jLabel5)
                 .addContainerGap())
         );
@@ -179,7 +179,7 @@ public class frmRecepcion extends javax.swing.JFrame {
         pnlRegistroCliente pl = new pnlRegistroCliente();
         pl.setSize(880, 530);
         pl.setLocation(0, 0);
-        
+
         pnl_host.removeAll();
         pnl_host.add(pl, BorderLayout.CENTER);
         pnl_host.revalidate();
