@@ -53,8 +53,6 @@ public class pnlRegistroCliente extends javax.swing.JPanel {
                 datos[4] = rs.getString(5);
                 datos[5] = rs.getString(6);
                 tcliente.addRow(datos);
-                
-                
             }
               
         } catch (SQLException e) {

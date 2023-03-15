@@ -31,6 +31,7 @@ public class frmRecepcion extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         pnl_host = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -147,15 +148,20 @@ public class frmRecepcion extends javax.swing.JFrame {
 
         pnl_host.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel4.setIcon(new javax.swing.ImageIcon("E:\\Descargas\\Logo.png")); // NOI18N
+
         javax.swing.GroupLayout pnl_hostLayout = new javax.swing.GroupLayout(pnl_host);
         pnl_host.setLayout(pnl_hostLayout);
         pnl_hostLayout.setHorizontalGroup(
             pnl_hostLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 880, Short.MAX_VALUE)
+            .addGroup(pnl_hostLayout.createSequentialGroup()
+                .addGap(186, 186, 186)
+                .addComponent(jLabel4)
+                .addContainerGap(194, Short.MAX_VALUE))
         );
         pnl_hostLayout.setVerticalGroup(
             pnl_hostLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 530, Short.MAX_VALUE)
+            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 530, Short.MAX_VALUE)
         );
 
         jPanel1.add(pnl_host, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 880, 530));
@@ -236,6 +242,7 @@ public class frmRecepcion extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
