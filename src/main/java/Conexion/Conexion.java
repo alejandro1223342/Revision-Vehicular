@@ -16,11 +16,11 @@ public class Conexion {
     private Connection con = null;
 
     
-    String bd="rtv_ist17j";
+    String bd="revision_vehicular_bdd";
     String url="jdbc:mysql://localhost:3306/";
    
     String user = "root";
-    String pass = "justin";
+    String pass = "Helado.12";
     String driver="com.mysql.jdbc.Driver";
     Connection cx;
     
@@ -41,7 +41,7 @@ public class Conexion {
     }
      
     public static void main(String[] args) throws SQLException{
-    Conexion conexion= new Conexion("rtv_ist17j");
+    Conexion conexion= new Conexion("revision_vehicular_bdd");
     conexion.conecta();
 }
 }
