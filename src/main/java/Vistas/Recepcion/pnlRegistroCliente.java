@@ -12,7 +12,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import net.sf.jasperreports.engine.jrdatasource;
 /**
  *
  * @author alejo
@@ -95,6 +94,8 @@ public class pnlRegistroCliente extends javax.swing.JPanel {
         tblCliente = new javax.swing.JTable();
         btnReporte = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
+
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -266,16 +267,7 @@ public class pnlRegistroCliente extends javax.swing.JPanel {
 
         jScrollPane1.setViewportView(jPanel1);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 880, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1)
-        );
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRegistrarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRegistrarMousePressed
@@ -304,7 +296,7 @@ public class pnlRegistroCliente extends javax.swing.JPanel {
     }//GEN-LAST:event_btnRegistrarMousePressed
 
     private void btnReporteMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReporteMousePressed
-        Jasper
+        
       
     }//GEN-LAST:event_btnReporteMousePressed
 
