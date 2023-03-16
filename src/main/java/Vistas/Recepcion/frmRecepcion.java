@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package Vistas_Recepcion;
+package Vistas.Recepcion;
 
 import java.awt.BorderLayout;
 import java.sql.ResultSet;
@@ -39,6 +39,7 @@ public class frmRecepcion extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         pnl_host = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -86,7 +87,7 @@ public class frmRecepcion extends javax.swing.JFrame {
                 .addComponent(jLabel6))
         );
 
-        side_pane.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 170, 40));
+        side_pane.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 170, 40));
 
         btnRevisiones.setBackground(new java.awt.Color(102, 102, 102));
         btnRevisiones.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -98,14 +99,14 @@ public class frmRecepcion extends javax.swing.JFrame {
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Registrar Vehiculo");
+        jLabel5.setText("Registrar Cliente");
 
         javax.swing.GroupLayout btnRevisionesLayout = new javax.swing.GroupLayout(btnRevisiones);
         btnRevisiones.setLayout(btnRevisionesLayout);
         btnRevisionesLayout.setHorizontalGroup(
             btnRevisionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnRevisionesLayout.createSequentialGroup()
-                .addContainerGap(18, Short.MAX_VALUE)
+                .addContainerGap(31, Short.MAX_VALUE)
                 .addComponent(jLabel5)
                 .addContainerGap())
         );
@@ -168,15 +169,20 @@ public class frmRecepcion extends javax.swing.JFrame {
 
         pnl_host.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel4.setIcon(new javax.swing.ImageIcon("E:\\Descargas\\Logo.png")); // NOI18N
+
         javax.swing.GroupLayout pnl_hostLayout = new javax.swing.GroupLayout(pnl_host);
         pnl_host.setLayout(pnl_hostLayout);
         pnl_hostLayout.setHorizontalGroup(
             pnl_hostLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 880, Short.MAX_VALUE)
+            .addGroup(pnl_hostLayout.createSequentialGroup()
+                .addGap(186, 186, 186)
+                .addComponent(jLabel4)
+                .addContainerGap(194, Short.MAX_VALUE))
         );
         pnl_hostLayout.setVerticalGroup(
             pnl_hostLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 530, Short.MAX_VALUE)
+            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 530, Short.MAX_VALUE)
         );
 
         jPanel1.add(pnl_host, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 90, 880, 530));
@@ -200,7 +206,7 @@ public class frmRecepcion extends javax.swing.JFrame {
         pnlRegistroCliente pl = new pnlRegistroCliente();
         pl.setSize(880, 530);
         pl.setLocation(0, 0);
-        
+
         pnl_host.removeAll();
         pnl_host.add(pl, BorderLayout.CENTER);
         pnl_host.revalidate();
@@ -271,6 +277,7 @@ public class frmRecepcion extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
