@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package Vistas_Recepcion;
+package Vistas.Recepcion;
 
 import Conexion.Conexion;
 import java.sql.ResultSet;
@@ -57,7 +57,6 @@ public class pnlRegistroTurno extends javax.swing.JPanel {
         comboVehiculo = new javax.swing.JComboBox<>();
         lblCodigo = new javax.swing.JTextField();
         lblTotala = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(880, 530));
 
@@ -196,7 +195,7 @@ public class pnlRegistroTurno extends javax.swing.JPanel {
 
         lblCodigo.setEnabled(false);
 
-        jLabel3.setText("asdas");
+        lblTotala.setEnabled(false);
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
@@ -233,23 +232,16 @@ public class pnlRegistroTurno extends javax.swing.JPanel {
                 .addComponent(btnRegistrarCliente1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(126, 126, 126))
             .addGroup(jPanel16Layout.createSequentialGroup()
-                .addGap(87, 87, 87)
-                .addComponent(jLabel3)
-                .addGap(110, 110, 110)
+                .addGap(226, 226, 226)
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel16Layout.createSequentialGroup()
-                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel16Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel16Layout.createSequentialGroup()
-                        .addGap(67, 67, 67)
-                        .addComponent(jLabel3)))
-                .addGap(37, 37, 37)
+                .addGap(20, 20, 20)
+                .addComponent(jLabel1)
+                .addGap(52, 52, 52)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jLabel7))
@@ -417,7 +409,6 @@ public class pnlRegistroTurno extends javax.swing.JPanel {
     private javax.swing.JComboBox<Object> comboVehiculo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;

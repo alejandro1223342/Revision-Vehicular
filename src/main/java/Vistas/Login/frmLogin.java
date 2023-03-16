@@ -5,7 +5,7 @@
 package Vistas.Login;
 
 import Conexion.Conexion;
-import Vistas_Recepcion.frmRecepcion;
+import Vistas.Recepcion.frmRecepcion;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
