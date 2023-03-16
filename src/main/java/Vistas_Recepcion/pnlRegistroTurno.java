@@ -196,7 +196,7 @@ public class pnlRegistroTurno extends javax.swing.JPanel {
 
         lblCodigo.setEnabled(false);
 
-        jLabel3.setText("sadasdsad");
+        jLabel3.setText("asdas");
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
