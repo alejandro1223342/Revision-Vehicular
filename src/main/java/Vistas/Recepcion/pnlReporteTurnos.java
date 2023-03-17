@@ -76,18 +76,17 @@ public class pnlReporteTurnos extends javax.swing.JPanel {
 
     public void mostrarDatos() {
         DefaultTableModel tcliente = new DefaultTableModel();
-        tcliente.addColumn("CEDULA");
-        tcliente.addColumn("NOMBRES");
-        tcliente.addColumn("APELLIDOS");
-        tcliente.addColumn("TELEFONO");
-        tcliente.addColumn("DIRECCION");
-        tcliente.addColumn("CORREO");
+        tcliente.addColumn("TURNO");
+        tcliente.addColumn("PLACA");
+        tcliente.addColumn("FECHA");
+        tcliente.addColumn("COSTO");
+        tcliente.addColumn("PRUEBAS");
         tblTurno.setModel(tcliente);
 
-        String[] datos = new String[7];
+        String[] datos = new String[5];
 
         try {
-            String query = "CALL `revision_vehicular_bdd`.`sp_reporte_clientes`(); ";
+            String query = "CALL sp_reporte_turno() ";
             Statement st = cx.conecta().createStatement();
             ResultSet rs = st.executeQuery(query);
 
@@ -97,7 +96,7 @@ public class pnlReporteTurnos extends javax.swing.JPanel {
                 datos[2] = rs.getString(3);
                 datos[3] = rs.getString(4);
                 datos[4] = rs.getString(5);
-                datos[5] = rs.getString(6);
+
                 tcliente.addRow(datos);
 
             }

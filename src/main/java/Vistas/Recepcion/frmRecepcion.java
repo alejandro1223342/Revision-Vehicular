@@ -32,9 +32,13 @@ public class frmRecepcion extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jPanel3 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
-        btnRevisiones = new javax.swing.JPanel();
+        btnRptTurno = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        btnRevisiones1 = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        btnRevisiones2 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
         pnl_overlay = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -82,49 +86,112 @@ public class frmRecepcion extends javax.swing.JFrame {
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(0, 21, Short.MAX_VALUE)
-                .addComponent(jLabel6))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jLabel6)
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
-        side_pane.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 170, 40));
+        side_pane.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 170, 50));
 
-        btnRevisiones.setBackground(new java.awt.Color(102, 102, 102));
-        btnRevisiones.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnRptTurno.setBackground(new java.awt.Color(102, 102, 102));
+        btnRptTurno.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                btnRevisionesMousePressed(evt);
+                btnRptTurnoMousePressed(evt);
             }
         });
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Registrar Cliente");
+        jLabel5.setText("Reporte Turno");
 
-        javax.swing.GroupLayout btnRevisionesLayout = new javax.swing.GroupLayout(btnRevisiones);
-        btnRevisiones.setLayout(btnRevisionesLayout);
-        btnRevisionesLayout.setHorizontalGroup(
-            btnRevisionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnRevisionesLayout.createSequentialGroup()
-                .addContainerGap(31, Short.MAX_VALUE)
+        javax.swing.GroupLayout btnRptTurnoLayout = new javax.swing.GroupLayout(btnRptTurno);
+        btnRptTurno.setLayout(btnRptTurnoLayout);
+        btnRptTurnoLayout.setHorizontalGroup(
+            btnRptTurnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnRptTurnoLayout.createSequentialGroup()
+                .addContainerGap(57, Short.MAX_VALUE)
                 .addComponent(jLabel5)
                 .addContainerGap())
         );
-        btnRevisionesLayout.setVerticalGroup(
-            btnRevisionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnRevisionesLayout.createSequentialGroup()
+        btnRptTurnoLayout.setVerticalGroup(
+            btnRptTurnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnRptTurnoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        side_pane.add(btnRevisiones, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 170, -1));
+        side_pane.add(btnRptTurno, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 170, -1));
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Cerrar sesión");
-        side_pane.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, -1, 40));
+        side_pane.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, -1, 40));
+
+        btnRevisiones1.setBackground(new java.awt.Color(102, 102, 102));
+        btnRevisiones1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnRevisiones1MousePressed(evt);
+            }
+        });
+
+        jLabel8.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel8.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Registrar Cliente");
+
+        javax.swing.GroupLayout btnRevisiones1Layout = new javax.swing.GroupLayout(btnRevisiones1);
+        btnRevisiones1.setLayout(btnRevisiones1Layout);
+        btnRevisiones1Layout.setHorizontalGroup(
+            btnRevisiones1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnRevisiones1Layout.createSequentialGroup()
+                .addContainerGap(41, Short.MAX_VALUE)
+                .addComponent(jLabel8)
+                .addContainerGap())
+        );
+        btnRevisiones1Layout.setVerticalGroup(
+            btnRevisiones1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnRevisiones1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        side_pane.add(btnRevisiones1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 170, -1));
+
+        btnRevisiones2.setBackground(new java.awt.Color(102, 102, 102));
+        btnRevisiones2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnRevisiones2MousePressed(evt);
+            }
+        });
+
+        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel7.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Registrar Cliente");
+
+        javax.swing.GroupLayout btnRevisiones2Layout = new javax.swing.GroupLayout(btnRevisiones2);
+        btnRevisiones2.setLayout(btnRevisiones2Layout);
+        btnRevisiones2Layout.setHorizontalGroup(
+            btnRevisiones2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnRevisiones2Layout.createSequentialGroup()
+                .addContainerGap(41, Short.MAX_VALUE)
+                .addComponent(jLabel7)
+                .addContainerGap())
+        );
+        btnRevisiones2Layout.setVerticalGroup(
+            btnRevisiones2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnRevisiones2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        side_pane.add(btnRevisiones2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 170, -1));
 
         jPanel1.add(side_pane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 170, 620));
 
@@ -169,16 +236,14 @@ public class frmRecepcion extends javax.swing.JFrame {
 
         pnl_host.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("E:\\Descargas\\Logo.png")); // NOI18N
-
         javax.swing.GroupLayout pnl_hostLayout = new javax.swing.GroupLayout(pnl_host);
         pnl_host.setLayout(pnl_hostLayout);
         pnl_hostLayout.setHorizontalGroup(
             pnl_hostLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnl_hostLayout.createSequentialGroup()
-                .addGap(186, 186, 186)
+                .addGap(213, 213, 213)
                 .addComponent(jLabel4)
-                .addContainerGap(194, Short.MAX_VALUE))
+                .addContainerGap(667, Short.MAX_VALUE))
         );
         pnl_hostLayout.setVerticalGroup(
             pnl_hostLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -202,16 +267,16 @@ public class frmRecepcion extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnRevisionesMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRevisionesMousePressed
-       /* pnlRegistroCliente pl = new pnlRegistroCliente();
+    private void btnRptTurnoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRptTurnoMousePressed
+        pnlReporteTurnos pl = new pnlReporteTurnos();
         pl.setSize(880, 530);
         pl.setLocation(0, 0);
 
         pnl_host.removeAll();
         pnl_host.add(pl, BorderLayout.CENTER);
         pnl_host.revalidate();
-        pnl_host.repaint();*/
-    }//GEN-LAST:event_btnRevisionesMousePressed
+        pnl_host.repaint();
+    }//GEN-LAST:event_btnRptTurnoMousePressed
 
     private void jLabel2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MousePressed
         System.exit(0);
@@ -232,6 +297,14 @@ public class frmRecepcion extends javax.swing.JFrame {
         pnl_host.revalidate();
         pnl_host.repaint();
     }//GEN-LAST:event_jPanel3MousePressed
+
+    private void btnRevisiones1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRevisiones1MousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRevisiones1MousePressed
+
+    private void btnRevisiones2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRevisiones2MousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRevisiones2MousePressed
                
     /**
      * @param args the command line arguments
@@ -272,7 +345,9 @@ public class frmRecepcion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel btnRevisiones;
+    private javax.swing.JPanel btnRevisiones1;
+    private javax.swing.JPanel btnRevisiones2;
+    private javax.swing.JPanel btnRptTurno;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
@@ -280,6 +355,8 @@ public class frmRecepcion extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JSeparator jSeparator1;
