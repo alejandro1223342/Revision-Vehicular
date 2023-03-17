@@ -18,7 +18,9 @@ import javax.swing.JOptionPane;
  */
 public class pnlRegistroTurno extends javax.swing.JPanel {
 
-        Conexion cx;
+    Conexion cx;
+    String NPruebas = " ";
+
     /**
      * Creates new form pnlRegistroTurno
      */
@@ -27,7 +29,7 @@ public class pnlRegistroTurno extends javax.swing.JPanel {
         cx = new Conexion("rtv_ist17j");
         traerNroTurno();
         comboVehiculo();
-        
+
     }
 
     /**
@@ -39,6 +41,8 @@ public class pnlRegistroTurno extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jPanel16 = new javax.swing.JPanel();
         jPanel17 = new javax.swing.JPanel();
@@ -55,7 +59,7 @@ public class pnlRegistroTurno extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         comboVehiculo = new javax.swing.JComboBox<>();
-        lblCodigo = new javax.swing.JTextField();
+        txtCodigo = new javax.swing.JTextField();
         lblTotala = new javax.swing.JTextField();
 
         setPreferredSize(new java.awt.Dimension(880, 530));
@@ -68,28 +72,33 @@ public class pnlRegistroTurno extends javax.swing.JPanel {
         jPanel16.setPreferredSize(new java.awt.Dimension(880, 530));
 
         jPanel17.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel17.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel17MouseClicked(evt);
+            }
+        });
 
         cbxGasesa.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         cbxGasesa.setText("Gases");
-        cbxGasesa.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                cbxGasesMouseClicked(evt);
+        cbxGasesa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbxGasesaActionPerformed(evt);
             }
         });
 
         cbxLucesa.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         cbxLucesa.setText("Luces");
-        cbxLucesa.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                cbxLucesaMouseClicked(evt);
+        cbxLucesa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbxLucesaActionPerformed(evt);
             }
         });
 
         cbxFrenosa.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         cbxFrenosa.setText("Frenos");
-        cbxFrenosa.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                cbxFrenosaMouseClicked(evt);
+        cbxFrenosa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbxFrenosaActionPerformed(evt);
             }
         });
 
@@ -193,8 +202,9 @@ public class pnlRegistroTurno extends javax.swing.JPanel {
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel7.setText("Placa Vehiculo:");
 
-        lblCodigo.setEnabled(false);
+        txtCodigo.setEnabled(false);
 
+        lblTotala.setText("0");
         lblTotala.setEnabled(false);
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
@@ -214,11 +224,12 @@ public class pnlRegistroTurno extends javax.swing.JPanel {
                             .addGroup(jPanel16Layout.createSequentialGroup()
                                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(jPanel16Layout.createSequentialGroup()
                                 .addGap(7, 7, 7)
                                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel2))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 211, Short.MAX_VALUE)
                                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -247,13 +258,13 @@ public class pnlRegistroTurno extends javax.swing.JPanel {
                     .addComponent(jLabel7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(comboVehiculo, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(26, 26, 26)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel16Layout.createSequentialGroup()
                         .addComponent(lblTotala)
@@ -286,123 +297,192 @@ public class pnlRegistroTurno extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRegistrarCliente1MousePressed
 
-    private void cbxGasesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cbxGasesMouseClicked
-
-        int mensaje = 0;
-        if(cbxGasesa.isSelected() ) {
-            mensaje= mensaje +10;
-        }
-        if (cbxFrenosa.isSelected()) {
-            mensaje= mensaje + 20;
-        }
-        if (cbxLucesa.isSelected()){
-            mensaje= mensaje + 30;
-        }
-        lblTotala.setText(String.valueOf(mensaje));
-
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbxGasesMouseClicked
-
-    private void cbxFrenosaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cbxFrenosaMouseClicked
-       
-        int mensaje = 0;
-        if(cbxGasesa.isSelected() ) {
-            mensaje= mensaje +10;
-        }
-        if (cbxFrenosa.isSelected()) {
-            mensaje= mensaje + 20;
-        }
-        if (cbxLucesa.isSelected()){
-            mensaje= mensaje + 30;
-        }
-        lblTotala.setText(String.valueOf(mensaje));
-// TODO add your handling code here:
-    }//GEN-LAST:event_cbxFrenosaMouseClicked
-
-    private void cbxLucesaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cbxLucesaMouseClicked
-        
-        int mensaje = 0;
-        if(cbxGasesa.isSelected() ) {
-            mensaje= mensaje +10;
-        }
-        if (cbxFrenosa.isSelected()) {
-            mensaje= mensaje + 20;
-        }
-        if (cbxLucesa.isSelected()){
-            mensaje= mensaje + 30;
-        }
-        lblTotala.setText(String.valueOf(mensaje));
-
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbxLucesaMouseClicked
-
-    public void traerNroTurno(){
-             String query = "call sp_nro_turno()";
+    public void comboVehiculo() {
+        String query = "call sp_vehiculos()";
         try {
-                // String query="select usuario.usu_cedula,usu_telefono,usu_correo,usu_usuario,usuario.usu_clave from usuario where usu_usuario='"+usuario+"' and usu_clave='"+contra+"'; ";
-                
-                Statement st = cx.conecta().createStatement();
-                ResultSet rs = st.executeQuery(query);
-                
-                //String u = rs.getString("tur_codigo");
-                while(rs.next())
-                {
-                lblCodigo.setText(String.valueOf(rs.getString("tur_codigo")));
-                }
+            // String query="select usuario.usu_cedula,usu_telefono,usu_correo,usu_usuario,usuario.usu_clave from usuario where usu_usuario='"+usuario+"' and usu_clave='"+contra+"'; ";
 
-                // TODO add your handling code here:
-            } catch (SQLException ex) {
-                Logger.getLogger(pnlRegistroTurno.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            }
-    
-    public void comboVehiculo(){
-             String query = "call sp_vehiculos()";
-        try {
-                // String query="select usuario.usu_cedula,usu_telefono,usu_correo,usu_usuario,usuario.usu_clave from usuario where usu_usuario='"+usuario+"' and usu_clave='"+contra+"'; ";
-                
-                Statement st = cx.conecta().createStatement();
-                ResultSet rs = st.executeQuery(query);
-                
-                while(rs.next())
-                {
+            Statement st = cx.conecta().createStatement();
+            ResultSet rs = st.executeQuery(query);
+
+            while (rs.next()) {
                 comboVehiculo.addItem(rs.getString("veh_placa"));
-                }
-                
-                // TODO add your handling code here:
-            } catch (SQLException ex) {
-                Logger.getLogger(pnlRegistroTurno.class.getName()).log(Level.SEVERE, null, ex);
             }
+
+            // TODO add your handling code here:
+        } catch (SQLException ex) {
+            Logger.getLogger(pnlRegistroTurno.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    private void btnRegistrarCliente1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRegistrarCliente1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRegistrarCliente1MouseEntered
+
+    public void traerNroTurno() {
+        String query = "call sp_nro_turno()";
+       try {
+            // String query="select usuario.usu_cedula,usu_telefono,usu_correo,usu_usuario,usuario.usu_clave from usuario where usu_usuario='"+usuario+"' and usu_clave='"+contra+"'; ";
+            
+            
+            Statement st = cx.conecta().createStatement();
+            ResultSet rs = st.executeQuery(query);
+
+
+            while (rs.next()) {
+                txtCodigo.setText(String.valueOf(rs.getString("codigo")));
             }
+
+            // TODO add your handling code here:
+        } catch (SQLException ex) {
+            Logger.getLogger(pnlRegistroTurno.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
     
+    private void cbxGasesaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxGasesaActionPerformed
+        int mensaje = 0;
+        if (cbxGasesa.isSelected()) {
+            mensaje = mensaje + 10;
+            NPruebas = "Gases";
+        }
+        if (cbxFrenosa.isSelected()) {
+            mensaje = mensaje + 20;
+            NPruebas = "Frenos";
+        }
+        if (cbxLucesa.isSelected()) {
+            mensaje += +30;
+            NPruebas = "Luces";
+        }
+        lblTotala.setText(String.valueOf(mensaje));
+
+        /* SEPARADOR*/
+        if (cbxGasesa.isSelected() && cbxFrenosa.isSelected()) {
+            NPruebas = "Gases,Frenos";
+        }
+        if (cbxFrenosa.isSelected() && cbxLucesa.isSelected()) {
+            NPruebas = "Frenos,Luces";
+        }
+        if (cbxLucesa.isSelected() && cbxGasesa.isSelected()) {
+            NPruebas = "Luces,Gases";
+        }
+        /* SEPARADOR*/
+        if (cbxGasesa.isSelected() && cbxFrenosa.isSelected() && cbxLucesa.isSelected()) {
+            NPruebas = "Gases,Frenos,Luces";
+        }
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbxGasesaActionPerformed
+
+    private void cbxFrenosaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxFrenosaActionPerformed
+        int mensaje = 0;
+        if (cbxGasesa.isSelected()) {
+            mensaje = mensaje + 10;
+            NPruebas = "Gases";
+        }
+        if (cbxFrenosa.isSelected()) {
+            mensaje = mensaje + 20;
+            NPruebas = "Frenos";
+        }
+        if (cbxLucesa.isSelected()) {
+            mensaje += +30;
+            NPruebas = "Luces";
+        }
+        lblTotala.setText(String.valueOf(mensaje));
+
+        /* SEPARADOR*/
+        if (cbxGasesa.isSelected() && cbxFrenosa.isSelected()) {
+            NPruebas = "Gases,Frenos";
+        }
+        if (cbxFrenosa.isSelected() && cbxLucesa.isSelected()) {
+            NPruebas = "Frenos,Luces";
+        }
+        if (cbxLucesa.isSelected() && cbxGasesa.isSelected()) {
+            NPruebas = "Luces,Gases";
+        }
+        /* SEPARADOR*/
+        if (cbxGasesa.isSelected() && cbxFrenosa.isSelected() && cbxLucesa.isSelected()) {
+            NPruebas = "Gases,Frenos,Luces";
+        }
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbxFrenosaActionPerformed
+
+    private void cbxLucesaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxLucesaActionPerformed
+       int mensaje = 0;
+        if(cbxGasesa.isSelected() ) {
+            mensaje= mensaje +10;
+            NPruebas="Gases";
+        }
+        if (cbxFrenosa.isSelected()) {
+            mensaje= mensaje + 20;
+            NPruebas="Frenos";
+        }
+        if (cbxLucesa.isSelected()){
+            mensaje+= + 30;
+            NPruebas="Luces";
+        }
+        lblTotala.setText(String.valueOf(mensaje));
+ 
+        /* SEPARADOR*/
+        if(cbxGasesa.isSelected() && cbxFrenosa.isSelected()) {
+        NPruebas="Gases,Frenos";
+        }
+        if (cbxFrenosa.isSelected() && cbxLucesa.isSelected()) {
+        NPruebas="Frenos,Luces";    
+        }
+        if (cbxLucesa.isSelected() && cbxGasesa.isSelected()){
+        NPruebas="Luces,Gases";     
+        }
+        /* SEPARADOR*/
+        if(cbxGasesa.isSelected() && cbxFrenosa.isSelected() && cbxLucesa.isSelected()) {
+        NPruebas="Gases,Frenos,Luces";
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbxLucesaActionPerformed
+
     private void btnRegistrarClienteMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRegistrarClienteMousePressed
 
         try {
             // TODO add your handling code here:
-            String codigo = this.lblCodigo.getText();
+            String codigo = this.txtCodigo.getText();
             String costo = this.lblTotala.getText();
-            String vehiculo = this.comboVehiculo.getName();
+            String vehiculo = this.comboVehiculo.getSelectedItem().toString();
 
-            String query = "CALL `rtv_ist17j`.`sp_turnos`('" + codigo + "','" + costo + "','" + vehiculo + "'); ";
+            String query = "CALL `rtv_ist17j`.`sp_turnos`('" + codigo + "','" + costo + "','" + vehiculo + "','" + NPruebas + "'); ";
             Statement st = cx.conecta().createStatement();
             ResultSet rs = st.executeQuery(query);
 
             JOptionPane.showMessageDialog(null, "datos guardaros");
-
+            traerNroTurno();
             //String query = "call sp_logeo('" + usuario + "','" + contra + "');";
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, "no se guadaron los datos");
         }
     }//GEN-LAST:event_btnRegistrarClienteMousePressed
 
-    private void btnRegistrarCliente1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRegistrarCliente1MouseEntered
+    private void jPanel17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel17MouseClicked
+
+        int mensaje = 0;
+        if(cbxGasesa.isSelected() ) {
+            mensaje= mensaje +10;
+        }
+        if (cbxFrenosa.isSelected()) {
+            mensaje= mensaje + 20;
+        }
+        if (cbxLucesa.isSelected()){
+            mensaje= mensaje + 30;
+        }
+        lblTotala.setText(String.valueOf(mensaje));
+
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnRegistrarCliente1MouseEntered
+    }//GEN-LAST:event_jPanel17MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel btnRegistrarCliente;
     private javax.swing.JPanel btnRegistrarCliente1;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JCheckBox cbxFrenosa;
     private javax.swing.JCheckBox cbxGasesa;
     private javax.swing.JCheckBox cbxLucesa;
@@ -417,7 +497,7 @@ public class pnlRegistroTurno extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
-    private javax.swing.JTextField lblCodigo;
     private javax.swing.JTextField lblTotala;
+    private javax.swing.JTextField txtCodigo;
     // End of variables declaration//GEN-END:variables
 }

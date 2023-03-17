@@ -203,14 +203,14 @@ public class frmRecepcion extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRevisionesMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRevisionesMousePressed
-        pnlRegistroCliente pl = new pnlRegistroCliente();
+       /* pnlRegistroCliente pl = new pnlRegistroCliente();
         pl.setSize(880, 530);
         pl.setLocation(0, 0);
 
         pnl_host.removeAll();
         pnl_host.add(pl, BorderLayout.CENTER);
         pnl_host.revalidate();
-        pnl_host.repaint();
+        pnl_host.repaint();*/
     }//GEN-LAST:event_btnRevisionesMousePressed
 
     private void jLabel2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MousePressed
