@@ -6,6 +6,7 @@ package Conexion;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 /**
@@ -16,11 +17,11 @@ public class Conexion {
     private Connection con = null;
 
     
-    String bd="rtv_ist17j";
+    String bd="rtv_ist17julio";
     String url="jdbc:mysql://localhost:3306/";
    
     String user = "root";
-    String pass = "justin";
+    String pass = "root";
     String driver="com.mysql.jdbc.Driver";
     Connection cx;
     
@@ -41,7 +42,11 @@ public class Conexion {
     }
      
     public static void main(String[] args) throws SQLException{
-    Conexion conexion= new Conexion("rtv_ist17j");
+    Conexion conexion= new Conexion("rtv_ist17julio");
     conexion.conecta();
-}
+    }
+
+    public PreparedStatement repareStatement(String procedureCall) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

@@ -35,10 +35,10 @@ public class frmRecepcion extends javax.swing.JFrame {
         btnRptTurno = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        btnRevisiones1 = new javax.swing.JPanel();
+        btnRevisionesCliente = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        btnRevisionesVehiculo = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
-        btnRevisiones2 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
         pnl_overlay = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -92,7 +92,7 @@ public class frmRecepcion extends javax.swing.JFrame {
                 .addContainerGap(17, Short.MAX_VALUE))
         );
 
-        side_pane.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 170, 50));
+        side_pane.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 170, 50));
 
         btnRptTurno.setBackground(new java.awt.Color(102, 102, 102));
         btnRptTurno.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -123,75 +123,75 @@ public class frmRecepcion extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        side_pane.add(btnRptTurno, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 170, -1));
+        side_pane.add(btnRptTurno, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 170, -1));
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Cerrar sesión");
-        side_pane.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, -1, 40));
+        side_pane.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 440, -1, 40));
 
-        btnRevisiones1.setBackground(new java.awt.Color(102, 102, 102));
-        btnRevisiones1.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnRevisionesCliente.setBackground(new java.awt.Color(102, 102, 102));
+        btnRevisionesCliente.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                btnRevisiones1MousePressed(evt);
+                btnRevisionesClienteMousePressed(evt);
+            }
+        });
+
+        jLabel10.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel10.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Registrar Cliente");
+
+        javax.swing.GroupLayout btnRevisionesClienteLayout = new javax.swing.GroupLayout(btnRevisionesCliente);
+        btnRevisionesCliente.setLayout(btnRevisionesClienteLayout);
+        btnRevisionesClienteLayout.setHorizontalGroup(
+            btnRevisionesClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnRevisionesClienteLayout.createSequentialGroup()
+                .addContainerGap(31, Short.MAX_VALUE)
+                .addComponent(jLabel10)
+                .addContainerGap())
+        );
+        btnRevisionesClienteLayout.setVerticalGroup(
+            btnRevisionesClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnRevisionesClienteLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        side_pane.add(btnRevisionesCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 170, -1));
+
+        btnRevisionesVehiculo.setBackground(new java.awt.Color(102, 102, 102));
+        btnRevisionesVehiculo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnRevisionesVehiculoMousePressed(evt);
             }
         });
 
         jLabel8.setBackground(new java.awt.Color(255, 255, 255));
         jLabel8.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Registrar Cliente");
+        jLabel8.setText("Registrar Vehiculo");
 
-        javax.swing.GroupLayout btnRevisiones1Layout = new javax.swing.GroupLayout(btnRevisiones1);
-        btnRevisiones1.setLayout(btnRevisiones1Layout);
-        btnRevisiones1Layout.setHorizontalGroup(
-            btnRevisiones1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnRevisiones1Layout.createSequentialGroup()
-                .addContainerGap(41, Short.MAX_VALUE)
+        javax.swing.GroupLayout btnRevisionesVehiculoLayout = new javax.swing.GroupLayout(btnRevisionesVehiculo);
+        btnRevisionesVehiculo.setLayout(btnRevisionesVehiculoLayout);
+        btnRevisionesVehiculoLayout.setHorizontalGroup(
+            btnRevisionesVehiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnRevisionesVehiculoLayout.createSequentialGroup()
+                .addContainerGap(18, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addContainerGap())
         );
-        btnRevisiones1Layout.setVerticalGroup(
-            btnRevisiones1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnRevisiones1Layout.createSequentialGroup()
+        btnRevisionesVehiculoLayout.setVerticalGroup(
+            btnRevisionesVehiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnRevisionesVehiculoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        side_pane.add(btnRevisiones1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 170, -1));
-
-        btnRevisiones2.setBackground(new java.awt.Color(102, 102, 102));
-        btnRevisiones2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                btnRevisiones2MousePressed(evt);
-            }
-        });
-
-        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel7.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Registrar Cliente");
-
-        javax.swing.GroupLayout btnRevisiones2Layout = new javax.swing.GroupLayout(btnRevisiones2);
-        btnRevisiones2.setLayout(btnRevisiones2Layout);
-        btnRevisiones2Layout.setHorizontalGroup(
-            btnRevisiones2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnRevisiones2Layout.createSequentialGroup()
-                .addContainerGap(41, Short.MAX_VALUE)
-                .addComponent(jLabel7)
-                .addContainerGap())
-        );
-        btnRevisiones2Layout.setVerticalGroup(
-            btnRevisiones2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnRevisiones2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        side_pane.add(btnRevisiones2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 170, -1));
+        side_pane.add(btnRevisionesVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 170, -1));
 
         jPanel1.add(side_pane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 170, 620));
 
@@ -288,7 +288,7 @@ public class frmRecepcion extends javax.swing.JFrame {
 
     private void jPanel3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MousePressed
         // TODO add your handling code here:
-         pnlRegistroTurno pl = new pnlRegistroTurno();
+        pnlRegistroTurno pl = new pnlRegistroTurno();
         pl.setSize(880, 530);
         pl.setLocation(0, 0);
         
@@ -298,13 +298,27 @@ public class frmRecepcion extends javax.swing.JFrame {
         pnl_host.repaint();
     }//GEN-LAST:event_jPanel3MousePressed
 
-    private void btnRevisiones1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRevisiones1MousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnRevisiones1MousePressed
+    private void btnRevisionesClienteMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRevisionesClienteMousePressed
+        pnlRegistroCliente pl = new pnlRegistroCliente();
+        pl.setSize(880, 530);
+        pl.setLocation(0, 0);
 
-    private void btnRevisiones2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRevisiones2MousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnRevisiones2MousePressed
+        pnl_host.removeAll();
+        pnl_host.add(pl, BorderLayout.CENTER);
+        pnl_host.revalidate();
+        pnl_host.repaint();
+    }//GEN-LAST:event_btnRevisionesClienteMousePressed
+
+    private void btnRevisionesVehiculoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRevisionesVehiculoMousePressed
+        pnlRegistroVehiculo p2 = new pnlRegistroVehiculo();
+        p2.setSize(880, 530);
+        p2.setLocation(0, 0);
+
+        pnl_host.removeAll();
+        pnl_host.add(p2, BorderLayout.CENTER);
+        pnl_host.revalidate();
+        pnl_host.repaint();
+    }//GEN-LAST:event_btnRevisionesVehiculoMousePressed
                
     /**
      * @param args the command line arguments
@@ -345,17 +359,17 @@ public class frmRecepcion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel btnRevisiones1;
-    private javax.swing.JPanel btnRevisiones2;
+    private javax.swing.JPanel btnRevisionesCliente;
+    private javax.swing.JPanel btnRevisionesVehiculo;
     private javax.swing.JPanel btnRptTurno;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
